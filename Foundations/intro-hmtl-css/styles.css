@@ -1,0 +1,21 @@
+* {
+    font-family: Andale Mono, monospace	;
+}
+
+.main-header, .profile {
+    right: 25%;
+    text-align: left;
+}
+
+.profile {
+    font-size: large;
+}
+
+.class-listings {
+    float: left
+}
+
+.personal-listings {
+    float: right
+}
+
