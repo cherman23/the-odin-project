@@ -22,13 +22,10 @@
 .listings {
     padding: 20px;
     display: flex;
-    justify-content:space-around;
-    margin-top: 50px;
 }
 
-.item-listing {
-    margin: auto;
+.listings div {
     width: 50%;
+    flex: auto;
     padding: 100px;
-    flex: 1;
 }
