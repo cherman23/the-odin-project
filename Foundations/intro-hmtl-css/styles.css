@@ -1,6 +1,8 @@
 * {
     font-family: Andale Mono, monospace;
-    color: black;  
+    color: rgb(254, 252, 255);
+    background-color: rgb(1, 22, 39);
+    outline: 2px solid red;
 }
 
 .main-header{
@@ -13,15 +15,20 @@
     font-size: large;
 }
 
+.link {
+    color: rgb(121, 94, 163);
+}
+
 .listings {
     padding: 20px;
     display: flex;
     justify-content:space-around;
-    margin-right: 50%;
+    margin-top: 50px;
 }
 
 .item-listing {
+    margin: auto;
     width: 50%;
-    padding: 20px;
-    float: left;
+    padding: 100px;
+    flex: 1;
 }
