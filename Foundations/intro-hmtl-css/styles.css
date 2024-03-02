@@ -2,7 +2,6 @@
     font-family: Andale Mono, monospace;
     color: rgb(254, 252, 255);
     background-color: rgb(1, 22, 39);
-    outline: 2px solid red;
 }
 
 .main-header{
@@ -20,12 +19,14 @@
 }
 
 .listings {
-    padding: 20px;
     display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    outline: 2px solid red;
 }
 
 .listings div {
-    width: 50%;
-    flex: auto;
-    padding: 100px;
+    flex: 1;
+    padding: 1rem;
+    outline: 2px solid red;
 }
