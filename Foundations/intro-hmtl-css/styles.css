@@ -1,10 +1,12 @@
 * {
-    font-family: Andale Mono, monospace	;
+    font-family: Andale Mono, monospace;
+    color: black;  
 }
 
-.main-header, .profile {
+.main-header{
     right: 25%;
     text-align: left;
+    margin-top: 5%
 }
 
 .profile {
@@ -12,13 +14,14 @@
 }
 
 .listings {
-    border: 3px solid #fff;
     padding: 20px;
+    display: flex;
+    justify-content:space-around;
+    margin-right: 50%;
 }
 
 .item-listing {
     width: 50%;
-    float: left;
     padding: 20px;
-    margin-left: 25px;
+    float: left;
 }
