@@ -1,7 +1,69 @@
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 .navbar {
+    display: flex;
+    color:azure;
     background-color: #1F2937;
+    width: 100%;
+}
+
+.header-links {
+    display: flex;
+    flex-direction: row;
+    left: 75%;
+    gap: 2rem;
+    margin-left: 60%;
 }
 
 .top-content {
-    background-color: white;
+    display: flex;
+    flex-direction: column;
+    column-gap: 3rem;
+    color: azure;
+    background-color: #1F2937;
+}
+
+.course-button {
+    width: 5%;
+    background: #3882F6;
+    border-radius: 5px;
+    border: none;
+    color: azure;
+}
+
+.mid-content {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    text-align: center;
+    font-size: x-large;
+}
+
+.box-text-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 25%;
+    margin-right: 25%;
+    justify-content: space-around;
+    font-size: medium;
+}
+
+.quote-content {
+    text-align: center;
+    background-color: #E5E7EB;
+    .quote {
+        font-size: 36px;
+        font-style: italic;    
+    }
+    .reference {
+        text-align: right;
+        margin-right: 25%;
+    }
+}
+
+.copywrite {
+    background-color: #1F2937;
+    text-align: center;
+    color: azure;
 }
