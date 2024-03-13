@@ -1,3 +1,15 @@
-var basic = 0;
+function add7(a){
+    return a + 7;
+}
 
-console.log("330")
+function multiply(a){
+    return 2 * a;
+}
+
+function capitalize(str){
+    let start = str[0].toUpperCase()
+    let end = str.substring(1, str.length).toLowerCase()
+    return start + end
+}
+
+console.log(capitalize("hELLO"));
