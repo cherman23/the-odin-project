@@ -1,6 +1,6 @@
-function genDivs(dimension){
+function genDivs(dimension = 16){
     const container = document.createElement('div');
-    const boxHeight = (960/dimension);
+    const boxHeight = (500/dimension);
     container.classList.add('etch-container')
     for (var i = 0; i < dimension; i++){
         const row = document.createElement('div');  
@@ -20,17 +20,18 @@ function genDivs(dimension){
 function changeGrid(){
     const changeButton = document.querySelector("button");
     changeButton.addEventListener("click", () => {
-        const gridSize = prompt("type size number of grid");
-        if (gridSize > 100){
-            changeGrid();
-        }
-        else{
+        const gridSize = prompt("Please type a number");
+        if (gridSize <= 100 && gridSize >= 1){
             /* getElementsBy[X] returns a list */
             document.body.getElementsByClassName("etch-container")[0].remove()
             genDivs(gridSize);
         }
+        else{
+            alert("Please select a value between 1 and 100")
+            changeGrid();
+        }
     });
 }
 
-genDivs(16);
+genDivs();
 changeGrid();
