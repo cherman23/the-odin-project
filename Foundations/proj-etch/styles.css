@@ -1,0 +1,19 @@
+
+.ethc-container{
+    display: flex;
+}
+
+.etch-row {
+    display: flex;
+    flex-direction: row;
+}   
+
+.etch-square:hover {
+    background-color: darkgrey;
+    transition:all 0.5s ease;
+}
+
+.etch-square{
+    outline: dashed black 1px;
+    transition:all 0.5s 3s ease;
+}
