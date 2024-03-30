@@ -4,34 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <script type='text/javascript' src="scripts.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <div class="display">
-            <h1>0</h1>
+            <h1 class="numDisplay" id="equation">0</h1>
         </div>
         <div class="buttons">
-            <button class="sevenButton">7</button>
-            <button class="eightButton">8</button>
-            <button class="nineButton">9</button>
-            <button class="divButton">/</button>
+            <button class="numButton operand" value="7" >7</button>
+            <button class="numButton operand" value="8">8</button>
+            <button class="numButton operand" value="9">9</button>
+            <button class="numButton operator" value="/">/</button>
             <br>
-            <button class="fourButton">4</button>
-            <button class="fiveButton">5</button>
-            <button class="sixButton">6</button>
-            <button class="multiButton">*</button>
+            <button class="numButton operand" value="4" >4</button>
+            <button class="numButton operand" value="5">5</button>
+            <button class="numButton operand" value="6">6</button>
+            <button class="numButton operator" value="*">*</button>
             <br>
-            <button class="oneButton">1</button>
-            <button class="twoButton">2</button>
-            <button class="threeButton">3</button>
-            <button class="minusButton">-</button>
+            <button class="numButton operand" value="1">1</button>
+            <button class="numButton operand" value="2">2</button>
+            <button class="numButton operand" value="3">3</button>
+            <button class="numButton operator" value="-">-</button>
             <br>
-            <button class="negativeButton">(-)</button>
-            <button class="zeroButton">0</button>
-            <button class="pointButton">.</button>
-            <button class="plusButton">+</button>
+            <button class="numButton" id="negativeButton" value="(-)">(-)</button>
+            <button class="numButton operand" value="0">0</button>
+            <button class="numButton" id="deciButton">.</button>
+            <button class="numButton operator" value="+">+</button>
             <br>
-            <button class="equalButton">=</button>
+            <button class="numButton" id="equalButton" value="=">=</button>
         </div>
     </div>
 </body>
