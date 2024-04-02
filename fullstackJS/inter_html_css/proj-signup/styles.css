@@ -1,0 +1,46 @@
+body > *:not(.container){
+    background-color: aquamarine;
+}
+
+.container {
+    background-image: url(img/odin_form_background.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 75%;
+}
+
+.container>img{
+    opacity: 0.5;
+    height: 20%;
+    width: 20%;
+}
+
+.container>form>ul{
+    list-style-type: none;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+form>button{
+    background-color: #596D48;
+    margin-left: 20%;
+}
+
+input{
+    background-color: #E5E7EB;
+}
+
+label{
+    color: white;
+    text-shadow: 50px;
+    font-family: system-ui, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    flex-direction: row;
+}
+
+
