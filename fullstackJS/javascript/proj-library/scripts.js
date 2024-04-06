@@ -1,7 +1,9 @@
 const myLibary = [];
-submissionButton = document.querySelector("button");
+submissionButton = document.getElementById("book-submit");
+addBookButton = document.getElementById("new-book-button");
+formDiv = document.getElementsByClassName("form-container")[0];
+cardContainer = document.getElementsByClassName("card-container")[0];
 entryForm = document.querySelector("form");
-bookTable = document.querySelector("tbody");
 
 function Book(name, author, pages){
     this.name = name;
@@ -23,19 +25,36 @@ submissionButton.addEventListener("click", (e) => {
     for (const value of formData){
         bookData.push(value[1]);
     }
-    const newBook = new Book(bookData[0], bookData[1], bookData[2]);
-    addBookToLibrary(newBook);
-    addBookToTable(newBook);
+    if (bookData.length == 3) {
+        const newBook = new Book(bookData[0], bookData[1], bookData[2]);
+        formDiv.style.display = "none";
+        addBookToLibrary(newBook);
+        createBookCard(newBook);
+    }
+    else {
+        alert("Please fill out all form data");
+    }
 });
 
-function addBookToTable(book) {
-    const newRow = document.createElement("tr");
-    newRow.classList.add("table-row")
-    bookInfo = book.info();
-    for (var i = 0; i < bookInfo.length; i++){
-        const newColumn = document.createElement("td");
-        newColumn.textContent = bookInfo[i];
-        newRow.appendChild(newColumn);
-    }
-    bookTable.appendChild(newRow);
+function createBookCard(book) {
+    const bookCard = document.createElement('div');
+    const titleText = document.createElement("h4");
+    const authorText = document.createElement("h4");
+    const pagesText = document.createElement("h4");
+    const delButton = document.createElement("button");
+    bookCard.classList.add("card");
+    delButton.classList.add("delete-book");
+    titleText.textContent = book.name;
+    authorText.textContent = book.author;
+    pagesText.textContent = book.pages;
+    delButton.textContent = "Remove";
+    bookCard.appendChild(titleText);
+    bookCard.appendChild(authorText);
+    bookCard.appendChild(pagesText);
+    bookCard.appendChild(delButton);
+    cardContainer.appendChild(bookCard);
 }
+
+addBookButton.addEventListener("click", () => {
+    formDiv.style.display = "flex";
+});
