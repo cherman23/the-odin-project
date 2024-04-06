@@ -1,0 +1,76 @@
+ .header-container {
+  display: flex;
+  align-items: center;
+  height: 75px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background-color: black;
+  border-radius: 5px;
+ }
+
+ .main-header {
+  display: flex;
+  flex-direction: left;
+  font-family:'Lucida Sans Unicode', 'Lucida Grande';
+  font-weight: 200;
+  text-decoration: underline;
+  color: white;
+  padding-left: 50px;
+ }
+
+ .name {
+  display: flex;
+  flex-direction: right;
+  font-family:'Lucida Sans Unicode', 'Lucida Grande';
+  font-weight: 200;
+  color: white;
+ }
+ 
+ 
+ .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .form-container {
+    display: flex;
+    justify-content: center;
+    height: 250px;
+    width: 250px;
+    color:antiquewhite;
+    background-color: black;
+    border-radius: 5px;
+    box-shadow: 5px 5px darkgrey;
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+  }
+
+  .table-container {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .table-title {
+    text-decoration: underline;
+  }
+
+  ul {
+    list-style: none; 
+    padding-left: 0;
+  }
+
+  .form-element {
+    display: grid;
+  }
+
+  button {
+    border-radius: 5px;
+    background-color: rgb(239, 236, 233);
+    width: 200px;
+    height: 25px;
+    margin-top: 25px;
+  }
+
+  .table-row:hover {
+    outline: aqua solid 3px;
+  }
