@@ -3,7 +3,6 @@ var submissionButton = document.getElementById("book-submit");
 var addBookButton = document.getElementById("new-book-button");
 var formDiv = document.getElementsByClassName("form-container")[0];
 var cardContainer = document.getElementsByClassName("card-container")[0];
-var bookDelButton = document.getElementsByClassName("delete-book");
 var entryForm = document.querySelector("form");
 
 function Book(name, author, pages){
@@ -54,18 +53,15 @@ function createBookCard(book) {
     bookCard.appendChild(pagesText);
     bookCard.appendChild(delButton);
     cardContainer.appendChild(bookCard);
-
+    deleteBook(delButton);
 }
 
 addBookButton.addEventListener("click", () => {
     formDiv.style.display = "flex";
 });
 
-function deleteBook(){
-    for (let i = 0; i < bookDelButton.length; i++){
-        bookDelButton[i].addEventListener("click", () => {
-            bookDelButton[i].parentElement.remove();
-        })
-    }
+function deleteBook(delButton){
+    delButton.addEventListener("click", () =>{
+        delButton.parentElement.remove();
+    })
 }
-deleteBook();
