@@ -1,9 +1,10 @@
 const myLibary = [];
-submissionButton = document.getElementById("book-submit");
-addBookButton = document.getElementById("new-book-button");
-formDiv = document.getElementsByClassName("form-container")[0];
-cardContainer = document.getElementsByClassName("card-container")[0];
-entryForm = document.querySelector("form");
+var submissionButton = document.getElementById("book-submit");
+var addBookButton = document.getElementById("new-book-button");
+var formDiv = document.getElementsByClassName("form-container")[0];
+var cardContainer = document.getElementsByClassName("card-container")[0];
+var bookDelButton = document.getElementsByClassName("delete-book");
+var entryForm = document.querySelector("form");
 
 function Book(name, author, pages){
     this.name = name;
@@ -25,14 +26,14 @@ submissionButton.addEventListener("click", (e) => {
     for (const value of formData){
         bookData.push(value[1]);
     }
-    if (bookData.length == 3) {
+    if ((bookData[0] === "") || (bookData[1] === "")) {
+        alert("Please fill out all form data");
+    }
+    else {
         const newBook = new Book(bookData[0], bookData[1], bookData[2]);
         formDiv.style.display = "none";
         addBookToLibrary(newBook);
         createBookCard(newBook);
-    }
-    else {
-        alert("Please fill out all form data");
     }
 });
 
@@ -53,8 +54,18 @@ function createBookCard(book) {
     bookCard.appendChild(pagesText);
     bookCard.appendChild(delButton);
     cardContainer.appendChild(bookCard);
+
 }
 
 addBookButton.addEventListener("click", () => {
     formDiv.style.display = "flex";
 });
+
+function deleteBook(){
+    for (let i = 0; i < bookDelButton.length; i++){
+        bookDelButton[i].addEventListener("click", () => {
+            bookDelButton[i].parentElement.remove();
+        })
+    }
+}
+deleteBook();

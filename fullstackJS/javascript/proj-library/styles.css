@@ -39,10 +39,10 @@
     flex-direction: center;
     width: 250px;
     height: 250px;
-    margin-left: 700px;
+    margin-left: 1310px;
     z-index: 10;
     position: absolute;
-    margin-top: 25px;
+    margin-top: 85px;
     color:antiquewhite;
     background-color: black;
     border-radius: 5px;
@@ -70,7 +70,7 @@
     background-color: black;
     color: white;
     border-radius: 5px;
-    width: 100px;
+    width: 250px;
     height: 50px;
     font-size: medium;
     float: right;
@@ -80,16 +80,16 @@
 
   .card-container {
     display: grid;
-    grid-template-columns: 200px 200px 15px 15px;
+    grid-template-columns: 200px 200px 200px 200px 200px;
     margin-left: 25px;
     gap: 25px; 
   }
 
   .card {
     height: 200px;
-    width: 200px;
     border-radius: 5px;
     margin-top: 25px;
+    gap: 25px;
     background-color: black;
     color: white;
     padding-left: 25px;
