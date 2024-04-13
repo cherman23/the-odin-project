@@ -1,0 +1,26 @@
+body {
+    display: grid;
+}
+
+.header {
+    display: grid;
+    place-self: center;
+}
+
+.game-container{
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    place-self: center;
+}
+
+.game-square {
+    width: 100px;
+    height: 100px;
+    border: 2.5px black solid;
+}
+
+.footer {
+    display: grid;
+    place-self: center;
+}
