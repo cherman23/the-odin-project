@@ -25,6 +25,9 @@ body:not(.game-square) {
     height: 150px;
     border: 2.5px black solid;
     background-color: whitesmoke;
+    font-size: 100px;
+    text-align: center;
+    font-family: 'Segoe UI';
 }
 
 .game-square:hover {
