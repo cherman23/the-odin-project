@@ -61,7 +61,6 @@ function newGame() {
     for (i = 0; i < gameSquares.length; i++) {
         gameSquares[i].textContent = "";
     }
-    updateDOM();
 }
 
 function makeClickable(cell, idx) {
@@ -89,3 +88,4 @@ function updateDOM() {
         makeClickable(gameSquares[i], i);
     }
 }
+updateDOM();
