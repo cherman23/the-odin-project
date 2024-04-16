@@ -13,6 +13,21 @@ body:not(.game-square) {
     color: #264653;
 }
 
+.container {
+    display: grid;
+    grid-template-columns: 450px 450px 450px;
+    place-self: center;
+}
+
+#player-one-score, #player-two-score {
+    font-family: 'Segoe UI';
+    font-size: larger;
+    font-weight: 500;
+    color: #264653;
+    display: grid;
+    margin-left: 25%;
+}
+
 .game-container{
     display: grid;
     grid-template-columns: 150px 150px 150px;

@@ -1,6 +1,8 @@
 let game = createGame()
 let gameSquares = document.getElementsByClassName("game-square");
 let newGameButton = document.getElementsByClassName("new-game-btn")[0];
+let playerOneScore = document.getElementById("player-one-score");
+let playerTwoScore = document.getElementById("player-two-score");
 
 function gameBoard () {
     let cells = new Array(9).fill(null);
@@ -63,6 +65,11 @@ function newGame() {
     }
 }
 
+function updateWins() {
+    playerOneScore.textContent = `Player One Wins: ${game.playerOne.getWins()}`
+    playerTwoScore.textContent = `Player Two Wins: ${game.playerTwo.getWins()}`
+}
+
 function makeClickable(cell, idx) {
     cell.addEventListener("click", () => {
         if (game.board.cells[idx] === null){
@@ -70,6 +77,8 @@ function makeClickable(cell, idx) {
             cell.textContent = game.currPlayer.playerSymbol;
             if (checkWin(game.board.cells)) {
                 alert(`Player ${game.currPlayer.playerNumber} won!`)
+                game.currPlayer.addWin();
+                updateWins();
                 newGame();
             }
             else {
