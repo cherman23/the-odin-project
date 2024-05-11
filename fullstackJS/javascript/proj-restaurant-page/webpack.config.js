@@ -23,8 +23,5 @@ module.exports = {
             type: 'asset/resource'
         },
     ]
-  },
-  resolve: {
-    extensions: ['', '.js', '.jsx', '.css']
-}
+  }
 };

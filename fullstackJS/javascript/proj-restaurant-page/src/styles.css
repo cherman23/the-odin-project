@@ -1,0 +1,21 @@
+body {
+    background-color: #C5DFF8;
+}
+
+header {
+    background-color: #7895CB;
+    display: flex;
+    border: 3px solid #4A55A2;
+    height: 40px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+button {
+    height: 20px;
+    width: 50px;
+    border-radius: 5px;
+    border: none;
+    background-color:#f7b156;
+}

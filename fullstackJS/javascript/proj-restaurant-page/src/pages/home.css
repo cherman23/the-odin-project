@@ -1,0 +1,12 @@
+
+div {
+    height: 750px;
+    width: 750px;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, p {
+    font-family:'Tahoma';
+}
+

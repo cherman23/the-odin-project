@@ -1,9 +1,11 @@
-
+import './styles.css'
 import home from './pages/home';
+import removeAll from './pages/utils.js';
 
 const homeButton = document.getElementsByClassName("Home")[0];
-const mainDiv = document.getElementById("content");
+const contentDiv = document.getElementById("content");
 
 homeButton.addEventListener("click", () => {
-    mainDiv.appendChild(home());
+    removeAll();
+    contentDiv.appendChild(home());
 })
