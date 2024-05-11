@@ -1,21 +1,27 @@
 body {
     background-color: #C5DFF8;
+    display: grid;
 }
 
 header {
     background-color: #7895CB;
-    display: flex;
+    display: grid;
     border: 3px solid #4A55A2;
     height: 40px;
+    margin-bottom: 40px;
     align-items: center;
     justify-content: space-around;
 }
-
 
 button {
     height: 20px;
     width: 50px;
     border-radius: 5px;
     border: none;
-    background-color:#f7b156;
+    background-color:#232247;
+    color: white;
+}
+
+#content {
+    place-self: center;
 }
