@@ -1,0 +1,6 @@
+div {
+    height: 750px;
+    width: 500px;
+    display: flex;
+    align-self: center;
+}
